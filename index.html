@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ - Truyện Tranh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Truyện Tranh</h1>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>📚 Truyện mới</h2>
+      <div id="new-comics" class="horizontal-list"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>💡 Có thể bạn thích</h2>
+        <div class="slider-buttons">
+          <button id="prev-btn">◀</button>
+          <button id="next-btn">▶</button>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div id="suggested-slider" class="slider-track"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>⭐ Đề xuất</h2>
+      <div id="recommended-comics" class="square-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Truyện tranh - All rights reserved.</p>
+  </footer>
+
+  <!-- Popup đọc truyện -->
+  <div id="reader-popup" class="reader-popup" aria-hidden="true">
+    <div class="reader-backdrop" id="reader-backdrop"></div>
+    <div class="reader-panel" role="dialog" aria-modal="true" aria-label="Reader">
+      <button id="reader-close" class="reader-close" aria-label="Close">✕</button>
+
+      <!-- Header cố định -->
+      <div class="reader-header">
+        <h2 id="reader-title">Tên Truyện</h2>
+        <p id="reader-subtitle">Nguồn / Tác giả</p>
+      </div>
+
+      <!-- Nội dung scroll -->
+      <div id="reader-content" class="reader-content"></div>
+
+      <!-- Nút scroll top -->
+      <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">^</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
